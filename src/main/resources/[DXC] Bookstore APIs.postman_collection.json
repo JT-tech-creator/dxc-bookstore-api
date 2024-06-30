@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "12ae358c-972a-46a1-9db7-25609eb21b07",
+		"name": "[DXC] Bookstore APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22047484"
+	},
+	"item": [
+		{
+			"name": "CREATE Book 1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "michael",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "michael",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"100-3-16-148410-0\",\n    \"title\": \"Journey to the West\",\n    \"authors\": [\n        {\n            \"name\": \"Johnny Tan\",\n            \"birthday\": \"1980-01-01\"\n        }\n    ],\n    \"year\": 2023,\n    \"price\": 29.99,\n    \"genre\": \"Fiction\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE Book 2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pam",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "pam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"200-3-16-148410-0\",\n    \"title\": \"Willy Wonka\",\n    \"authors\": [\n        {\n            \"name\": \"Rothi Prada\",\n            \"birthday\": \"1980-01-01\"\n        },\n        {\n            \"name\": \"Billy\",\n            \"birthday\": \"1999-01-01\"\n        }\n    ],\n    \"year\": 2023,\n    \"price\": 29.99,\n    \"genre\": \"Fiction\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE Book 3",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pam",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "pam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"300-3-16-148410-0\",\n    \"title\": \"Big Friendly Giant\",\n    \"authors\": [\n        {\n            \"name\": \"Billy\",\n            \"birthday\": \"1999-01-01\"\n        },\n        {\n            \"name\": \"Johnny Tan\",\n            \"birthday\": \"1980-01-01\"\n        }\n    ],\n    \"year\": 2023,\n    \"price\": 29.99,\n    \"genre\": \"Fiction\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Books",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "michael",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "michael",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Books By Author Name",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pam",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "pam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/get/Johnny Tan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"get",
+						"Johnny Tan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Books By Title",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pam",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "pam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/get/Willy Wonka",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"get",
+						"Willy Wonka"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Books By non-existent titleOrAuthorName",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pam",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "pam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/get/Germaine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"get",
+						"Germaine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Book 2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pam",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "pam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"200-3-16-148410-0\",\n    \"title\": \"Wheels on the Bus\",\n    \"authors\": [\n        {\n            \"name\": \"Roti Prata\",\n            \"birthday\": \"1980-01-01\"\n        },\n        {\n            \"name\": \"Billy\",\n            \"birthday\": \"1999-01-01\"\n        }\n    ],\n    \"year\": 1990,\n    \"price\": 10.10,\n    \"genre\": \"Fiction\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/update/200-3-16-148410-0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"update",
+						"200-3-16-148410-0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE non-existent book",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pam",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "pam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"200-3-16-148410-0\",\n    \"title\": \"Wheels on the Bus\",\n    \"authors\": [\n        {\n            \"name\": \"Roti Prata\",\n            \"birthday\": \"1980-01-01\"\n        },\n        {\n            \"name\": \"Billy\",\n            \"birthday\": \"1999-01-01\"\n        }\n    ],\n    \"year\": 1990,\n    \"price\": 10.10,\n    \"genre\": \"Fiction\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/update/555-3-16-148410-0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"update",
+						"555-3-16-148410-0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Book (USER)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pam",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "pam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/delete/100-3-16-148410-0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"delete",
+						"100-3-16-148410-0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Book (ADMIN)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "michael",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "michael",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/delete/100-3-16-148410-0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"delete",
+						"100-3-16-148410-0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE non-existent book",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "michael",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "michael",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/delete/666-3-16-148410-0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"delete",
+						"666-3-16-148410-0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
